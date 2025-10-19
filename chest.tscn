@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpw370mlsgwnm"]
+
+[ext_resource type="Script" uid="uid://cujkykol3fyin" path="res://chest.gd" id="1_8uwsg"]
+[ext_resource type="PackedScene" uid="uid://b4ewani4lsceb" path="res://modles/chest.glb" id="1_twpm2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8uwsg"]
+size = Vector3(2.0125122, 1.7359619, 2.0030518)
+
+[node name="Chest" type="StaticBody3D"]
+script = ExtResource("1_8uwsg")
+metadata/name = "Chest"
+metadata/type = 1
+metadata/supports_outline = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.9999656, -0.008290219, 0, 0.008290219, 0.9999656, 0, 0, 0, 1, 0, 0.18, 0)
+shape = SubResource("BoxShape3D_8uwsg")
+
+[node name="chest" parent="." instance=ExtResource("1_twpm2")]

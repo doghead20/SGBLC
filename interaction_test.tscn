@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3enfnrx7ca4d"]
+
+[ext_resource type="PackedScene" uid="uid://fwmyc1lla47x" path="res://modles/golden-cube.glb" id="1_0h4no"]
+
+[sub_resource type="GDScript" id="GDScript_0h4no"]
+script/source = "extends Node3D
+
+var to_outline = \"golden-cube\"
+var outline_color = Color.WHITE
+
+
+func _ready():
+	add_outline_to_glb(get_node(to_outline), outline_color)# Call this once to add the outline mesh(es)
+	set_outline_visible(get_node(to_outline), false)
+	
+	
+func add_outline_to_glb(root: Node3D, outline_color: Color, outline_size: float = 0.05):
+	for mesh in root.get_children():
+		if mesh is MeshInstance3D:
+			# Prevent duplicate outlines
+			if mesh.has_node(\"Outline\"):
+				continue
+
+			var outline_mesh = mesh.duplicate()
+			outline_mesh.name = \"Outline\"
+			
+			# Create outline material
+			var outline_mat = StandardMaterial3D.new()
+			outline_mat.albedo_color = outline_color
+			outline_mat.flags_unshaded = true
+			outline_mat.params_cull_mode = BaseMaterial3D.CULL_FRONT
+			outline_mat.depth_draw_mode = BaseMaterial3D.DEPTH_DRAW_DISABLED
+			outline_mat.render_priority = -1
+			
+			outline_mesh.material_override = outline_mat
+			outline_mesh.scale = mesh.scale * (1.0 + outline_size)
+
+			# Add as child to original mesh
+			mesh.add_child(outline_mesh)
+			outline_mesh.owner = root.owner
+		elif mesh is Node3D:
+			add_outline_to_glb(mesh, outline_color, outline_size)
+
+func set_outline_visible(root: Node3D, i_visible: bool):
+	for mesh in root.get_children():
+		if mesh is MeshInstance3D and mesh.has_node(\"Outline\"):
+			mesh.get_node(\"Outline\").visible = i_visible
+		elif mesh is Node3D:
+			set_outline_visible(mesh, visible)
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ksj01"]
+size = Vector3(2.0030518, 1.9956665, 2.0041504)
+
+[node name="InteractionTest" type="StaticBody3D"]
+script = SubResource("GDScript_0h4no")
+metadata/type = 0
+metadata/name = "Interaction Test"
+metadata/supports_outline = true
+
+[node name="golden-cube" parent="." instance=ExtResource("1_0h4no")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0037231445, 0.0033874512, -0.017700195)
+shape = SubResource("BoxShape3D_ksj01")

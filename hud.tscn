@@ -1,0 +1,148 @@
+[gd_scene load_steps=10 format=3 uid="uid://bxbgiybnabw7l"]
+
+[ext_resource type="Texture2D" uid="uid://cdkgb6wfwpxr7" path="res://assets/pointer.svg" id="1_8sq4i"]
+[ext_resource type="Theme" uid="uid://drlqvr0t2brtp" path="res://HUD-theme.tres" id="1_37p78"]
+[ext_resource type="Texture2D" uid="uid://d4khruoum454s" path="res://assets/pointer-full.svg" id="2_640wx"]
+[ext_resource type="Script" uid="uid://dx32pjsbwjjb0" path="res://target.gd" id="4_640wx"]
+[ext_resource type="Texture2D" uid="uid://d25xbvkvbi5ri" path="res://assets/look-line.svg" id="5_a2258"]
+[ext_resource type="Script" uid="uid://dnp2tljegfm5m" path="res://look_image.gd" id="6_1xsix"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37p78"]
+bg_color = Color(0.4171, 0.46317497, 0.97, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64ctp"]
+bg_color = Color(0.19399999, 0.24573328, 0.97, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a2258"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8sq4i")
+}],
+"loop": true,
+"name": &"pointer",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_640wx")
+}],
+"loop": true,
+"name": &"pointer_full",
+"speed": 5.0
+}]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -428.5
+offset_top = -146.0
+offset_right = 428.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Health" type="ProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = -76.5
+offset_top = 1.0
+offset_right = 363.5
+offset_bottom = 38.0
+theme = ExtResource("1_37p78")
+value = 80.0
+show_percentage = false
+
+[node name="Mana" type="ProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = 455.5
+offset_top = -1.0
+offset_right = 900.5
+offset_bottom = 40.0
+theme_override_styles/background = SubResource("StyleBoxFlat_37p78")
+theme_override_styles/fill = SubResource("StyleBoxFlat_64ctp")
+value = 80.0
+show_percentage = false
+
+[node name="Hotbar" type="Control" parent="Control"]
+layout_mode = 1
+anchor_right = 0.116000004
+anchor_bottom = 0.27400002
+offset_left = 125.0
+offset_top = 39.0
+offset_right = 988.588
+offset_bottom = 96.996
+
+[node name="Button" type="Button" parent="Control/Hotbar"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 99.0
+offset_bottom = 94.0
+theme = ExtResource("1_37p78")
+
+[node name="Image" type="Sprite2D" parent="Control/Hotbar/Button"]
+
+[node name="Count" type="Label" parent="Control/Hotbar/Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.95500004
+offset_left = 41.5
+offset_top = 39.0
+offset_right = -1.5
+offset_bottom = -0.040000916
+text = "16"
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Target" type="AnimatedSprite2D" parent="Control2"]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_a2258")
+animation = &"pointer_full"
+script = ExtResource("4_640wx")
+
+[node name="Look Image" type="Sprite2D" parent="Control2"]
+position = Vector2(188, -93)
+texture = ExtResource("5_a2258")
+script = ExtResource("6_1xsix")
+
+[node name="Look Text" type="Label" parent="Control2/Look Image"]
+offset_left = -123.0
+offset_top = -14.0
+offset_right = 156.0
+offset_bottom = 31.0
+theme = ExtResource("1_37p78")
+text = "Testing"
+
+[node name="Interact" type="Label" parent="Control2/Look Image"]
+offset_left = -123.0
+offset_top = 32.0
+offset_right = 68.0
+offset_bottom = 77.0
+theme = ExtResource("1_37p78")
+text = "E to interact"

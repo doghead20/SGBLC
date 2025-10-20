@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2m74lfmy1kqy"]
+
+[ext_resource type="PackedScene" uid="uid://dhytuynadq7b6" path="res://modles/tree.glb" id="1_brfkd"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_nnvrw"]
+height = 21.700684
+radius = 1.4194336
+
+[node name="Tree" type="StaticBody3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.99875844, 0)
+
+[node name="tree" parent="." instance=ExtResource("1_brfkd")]
+
+[node name="MeshInstance3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8322754, 0)
+shape = SubResource("CylinderShape3D_nnvrw")

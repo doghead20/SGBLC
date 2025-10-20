@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://dfqnqv27btbu0"]
+
+[ext_resource type="Shader" uid="uid://5k43pkrlgp16" path="res://WADRE.gdshader" id="1_qi1wl"]
+
+[sub_resource type="Gradient" id="Gradient_7wcun"]
+interpolation_mode = 2
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0, 0.56692916, 0.9895013)
+colors = PackedColorArray(0, 0, 0, 1, 0.12073491, 0.12073491, 0.12073491, 1, 0.69135684, 0.6913568, 0.69135684, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_dcmoc"]
+noise_type = 2
+frequency = 0.0111
+fractal_type = 2
+fractal_octaves = 1
+fractal_lacunarity = 1.0
+fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qmoj4"]
+noise = SubResource("FastNoiseLite_dcmoc")
+color_ramp = SubResource("Gradient_7wcun")
+seamless = true
+seamless_blend_skirt = 1.0
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_x4ob8"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_746c1"]
+noise = SubResource("FastNoiseLite_x4ob8")
+seamless = true
+as_normal_map = true
+bump_strength = 11.1
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_3g7ry"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_wox83"]
+noise = SubResource("FastNoiseLite_3g7ry")
+as_normal_map = true
+bump_strength = 30.8
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ywqbu"]
+render_priority = 0
+shader = ExtResource("1_qi1wl")
+shader_parameter/albedo = Color(0.26264048, 0.7097139, 0.99999994, 0.627451)
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_746c1")
+shader_parameter/texture_foam = SubResource("NoiseTexture2D_qmoj4")
+shader_parameter/texture_refraction = SubResource("NoiseTexture2D_wox83")
+shader_parameter/roughness = 0.154000007315
+shader_parameter/metallic = 0.0
+shader_parameter/specular = 0.50000002375
+shader_parameter/normal_scale = 2.0
+shader_parameter/refraction = 0.10000076474999986
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/roughness_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/refraction_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/uv1_blend_sharpness = 2.0
+shader_parameter/uv1_scale = Vector3(2, 2, 2)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dcmoc"]
+material = SubResource("ShaderMaterial_ywqbu")
+size = Vector3(18, 1, 18)
+subdivide_width = 160
+subdivide_height = 80
+subdivide_depth = 160
+
+[node name="Water" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 0.5401293, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_dcmoc")

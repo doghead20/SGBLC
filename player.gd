@@ -42,7 +42,8 @@ func _physics_process(delta: float) -> void:
 	#print(movement_mount)
 	offset = (movement_mount*sin(Time.get_ticks_msec()/movement_bob_speed))*movement_bob_amount
 	camera.v_offset = offset
-	camera.rotate_z(offset/camera_swerve)
+	print(offset)
+	camera.rotation.z = (offset*camera_swerve)
 	#print(offset)
 
 	if Input.is_action_pressed("forward"):

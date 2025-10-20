@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpw370mlsgwnm"]
+[gd_scene load_steps=5 format=3 uid="uid://cpw370mlsgwnm"]
 
 [ext_resource type="Script" uid="uid://cujkykol3fyin" path="res://chest.gd" id="1_8uwsg"]
 [ext_resource type="PackedScene" uid="uid://b4ewani4lsceb" path="res://modles/chest.glb" id="1_twpm2"]
+[ext_resource type="ArrayMesh" uid="uid://dwjtvtxr4uixh" path="res://modles/BlockBench/Chest.obj" id="2_bp1or"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8uwsg"]
-size = Vector3(2.0125122, 1.7359619, 2.0030518)
+size = Vector3(1.1359406, 1.1325073, 1.1330872)
 
 [node name="Chest" type="StaticBody3D"]
 script = ExtResource("1_8uwsg")
@@ -13,7 +14,12 @@ metadata/type = 1
 metadata/supports_outline = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.9999656, -0.008290219, 0, 0.008290219, 0.9999656, 0, 0, 0, 1, 0, 0.18, 0)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, -0.003326252, -0.11992428, -0.0030670166)
 shape = SubResource("BoxShape3D_8uwsg")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -0.78149307, 0)
+mesh = ExtResource("2_bp1or")
+
 [node name="chest" parent="." instance=ExtResource("1_twpm2")]
+visible = false

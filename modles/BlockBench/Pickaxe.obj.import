@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://e7rf7artu80c"
+path="res://.godot/imported/Pickaxe.obj-7677a61129030b18b0f3b061cd5ca045.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pickaxe.obj-7677a61129030b18b0f3b061cd5ca045.mesh"]
+
+source_file="res://modles/BlockBench/Pickaxe.obj"
+dest_files=["res://.godot/imported/Pickaxe.obj-7677a61129030b18b0f3b061cd5ca045.mesh", "res://.godot/imported/Pickaxe.obj-7677a61129030b18b0f3b061cd5ca045.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

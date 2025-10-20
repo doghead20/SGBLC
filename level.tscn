@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d2k0cvyx5yfa1"]
+[gd_scene load_steps=21 format=3 uid="uid://d2k0cvyx5yfa1"]
 
 [ext_resource type="Script" uid="uid://dm53fumr751jp" path="res://level.gd" id="1_i2t4f"]
 [ext_resource type="Texture2D" uid="uid://dgrc55ix5op1p" path="res://textures/low-poly/sand/packed_albedo_height.png" id="2_aicyk"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b3mrd1eoji0cb" path="res://textures/low-poly/grass/packed_albedo_height.png" id="4_h6smj"]
 [ext_resource type="Texture2D" uid="uid://xbg02kiaex5e" path="res://textures/low-poly/grass/packed_normal_roughness.png" id="5_v5j5c"]
 [ext_resource type="PackedScene" uid="uid://bxbgiybnabw7l" path="res://hud.tscn" id="6_1ainy"]
+[ext_resource type="Script" uid="uid://dbndw8p05yam7" path="res://addons/terrain_3d/utils/terrain_3d_objects.gd" id="6_8cye3"]
 [ext_resource type="PackedScene" uid="uid://dfqnqv27btbu0" path="res://water.tscn" id="9_i2t4f"]
 [ext_resource type="PackedScene" uid="uid://cpw370mlsgwnm" path="res://chest.tscn" id="11_2orkt"]
 
@@ -96,7 +97,6 @@ texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_
 [sub_resource type="Environment" id="Environment_oi3di"]
 ambient_light_color = Color(1, 1, 1, 1)
 reflected_light_source = 2
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.0297
 volumetric_fog_length = 1024.0
 volumetric_fog_detail_spread = 2.6390152
@@ -112,6 +112,13 @@ collision_mode = 2
 collision_layer = 4278255615
 top_level = true
 metadata/_edit_lock_ = true
+
+[node name="Terrain3DObjects" type="Node3D" parent="Terrain3D"]
+script = ExtResource("6_8cye3")
+metadata/_custom_type_script = "uid://dbndw8p05yam7"
+
+[node name="Chest" parent="Terrain3D/Terrain3DObjects" instance=ExtResource("11_2orkt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.424, 22.720642, 6)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.25881904, 0.9659258, 0, -0.9659258, -0.25881904, 0, 0, 0)
@@ -132,13 +139,10 @@ offset_right = 89.0
 offset_bottom = 23.0
 text = "Hello world"
 
-[node name="Chest" parent="." instance=ExtResource("11_2orkt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71, 22, 6)
-
 [node name="Player" parent="." instance=ExtResource("3_oi3di")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 71.37108, 0)
 movement_bob_speed = 100.0
 movement_bob_amount = 0.02
-camera_swerve = 200.0
+camera_swerve = 0.1
 
 [node name="Water" parent="." instance=ExtResource("9_i2t4f")]

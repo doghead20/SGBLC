@@ -42,13 +42,11 @@ func _apply_highlight(root: Node3D, amount: float):
 			_apply_highlight(child, amount)
 
 func highlight(root: Node3D, amount: float = 0.7):
-	print("high")
 	if original_colors.size() == 0:
 		_store_original_colors(root)
 	_apply_highlight(root, amount)
 
 func remove_highlight(root: Node3D):
-	print("stop")
 	for child in root.get_children():
 		if child is MeshInstance3D:
 			var orig_color = original_colors.get(child.get_path(), null)

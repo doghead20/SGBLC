@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bxbgiybnabw7l"]
+[gd_scene load_steps=9 format=3 uid="uid://bxbgiybnabw7l"]
 
 [ext_resource type="Texture2D" uid="uid://cdkgb6wfwpxr7" path="res://assets/pointer.svg" id="1_8sq4i"]
 [ext_resource type="Theme" uid="uid://drlqvr0t2brtp" path="res://HUD-theme.tres" id="1_37p78"]
 [ext_resource type="Texture2D" uid="uid://d4khruoum454s" path="res://assets/pointer-full.svg" id="2_640wx"]
-[ext_resource type="Script" uid="uid://dx32pjsbwjjb0" path="res://target.gd" id="4_640wx"]
 [ext_resource type="Texture2D" uid="uid://d25xbvkvbi5ri" path="res://assets/look-line.svg" id="5_a2258"]
 [ext_resource type="Script" uid="uid://dnp2tljegfm5m" path="res://look_image.gd" id="6_1xsix"]
 
@@ -104,7 +103,7 @@ offset_left = 41.5
 offset_top = 39.0
 offset_right = -1.5
 offset_bottom = -0.040000916
-text = "16"
+text = "512"
 
 [node name="Control2" type="Control" parent="."]
 layout_mode = 3
@@ -124,7 +123,6 @@ grow_vertical = 2
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_a2258")
 animation = &"pointer_full"
-script = ExtResource("4_640wx")
 
 [node name="Look Image" type="Sprite2D" parent="Control2"]
 position = Vector2(188, -93)

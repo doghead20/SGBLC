@@ -55,18 +55,18 @@ void vertex() {
 	uv1_power_normal /= dot(uv1_power_normal, vec3(1.0));
 
 	// === WAVE MOTION (scale-independent) ===
-	float wave1 = sin(TIME * 2.15 + local_pos.x * 8.0 + local_pos.z * 12.0);
-	float wave2 = sin(TIME * 1.3 + local_pos.x * 7.0 + local_pos.z * 9.0);
-	float wave3 = cos(TIME * 0.9 + local_pos.x * 5.0 - local_pos.z * 5.0);
+	float wave1 = sin(TIME * 2.15 + local_pos.x * -.5 + local_pos.z * .5);
+	float wave2 = sin(TIME * 1.3 + local_pos.x * .1 + local_pos.z * .4);
+	float wave3 = cos(TIME * 0.9 + local_pos.x * .09 - local_pos.z * -.4);
 	float total_wave = (wave1 + wave2 + wave3) / 3.0;
 
 	// Small, natural height offset
-	VERTEX.y += total_wave * 0.1; // <- wave height (adjust)
+	VERTEX.y += total_wave * .5; // <- wave height (adjust)
 }
 
 // === FRAGMENT ===
 void fragment() {
-	float offset = TIME * 0.02;
+	float offset = TIME * 0.01;
 	vec3 triplanar_pos = uv1_triplanar_pos + vec3(offset);
 
 	vec4 albedo_tex = triplanar_texture(texture_albedo, uv1_power_normal, triplanar_pos);

@@ -71,9 +71,10 @@ lod0_range = 128.0
 
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_4c15r"]
 name = "diffuse"
+albedo_color = Color(0.99607843, 0.7921569, 1, 1)
 albedo_texture = ExtResource("2_aicyk")
 normal_texture = ExtResource("3_8b0r0")
-normal_depth = 1.782
+normal_depth = 1.75
 ao_strength = 2.0
 roughness = 1.0
 uv_scale = 1.0
@@ -83,6 +84,10 @@ name = "packed_albedo_height"
 id = 1
 albedo_texture = ExtResource("4_h6smj")
 normal_texture = ExtResource("5_v5j5c")
+normal_depth = 1.75
+ao_strength = 2.0
+roughness = 1.0
+uv_scale = 1.0
 
 [sub_resource type="Terrain3DAssets" id="Terrain3DAssets_42xju"]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_fedht")])
@@ -91,7 +96,8 @@ texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_
 [sub_resource type="Environment" id="Environment_oi3di"]
 ambient_light_color = Color(1, 1, 1, 1)
 reflected_light_source = 2
-volumetric_fog_density = 0.01
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0297
 volumetric_fog_length = 1024.0
 volumetric_fog_detail_spread = 2.6390152
 

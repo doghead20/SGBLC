@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1760920684
+::res://::1760925331
 chest.gd::GDScript::6195848216312964805::1760910590::0::1::::<>StaticBody3D<><>0<>0<><>::
 chest.tscn::PackedScene::5872848885893932622::1760911187::0::1::::<><><>0<>0<><>::uid://cujkykol3fyin::::res://chest.gd<>uid://b4ewani4lsceb::::res://modles/chest.glb
 grass.svg::CompressedTexture2D::8527506960659535476::1760839783::1760918915::1::::<><><>0<>0<>1bbaa48700071c9d927b8a245b34f3c3<>res://.godot/imported/grass.svg-be2b4e3af2e4336e5efd51c44d12c822.s3tc.ctex::
@@ -8,7 +8,7 @@ hud.tscn::PackedScene::4003208316125677835::1760914972::0::1::::<><><>0<>0<><>::
 interaction_test.tscn::PackedScene::9133606143989021581::1760910345::0::1::::<><><>0<>0<><>::uid://fwmyc1lla47x::::res://modles/golden-cube.glb
 Ithaca.ttf::FontFile::8393366617356511913::1760914844::1760918495::1::::<><><>0<>0<>85749e5896644cc2242f029d9674373e<>res://.godot/imported/Ithaca.ttf-c493af99527a43527b182ff658229d17.fontdata::
 level.gd::GDScript::8065169581945500857::1760913563::0::1::::<>Node3D<><>0<>0<><>::
-level.tscn::PackedScene::9076527244405459630::1760920484::0::1::::<><><>0<>0<><>::uid://dm53fumr751jp::::res://level.gd<>uid://dgrc55ix5op1p::::res://textures/low-poly/sand/packed_albedo_height.png<>uid://bnrp8h3cvgsgr::::res://textures/low-poly/sand/packed_normal_roughness.png<>uid://ck7qad54dr1r::::res://player.tscn<>uid://b3mrd1eoji0cb::::res://textures/low-poly/grass/packed_albedo_height.png<>uid://xbg02kiaex5e::::res://textures/low-poly/grass/packed_normal_roughness.png<>uid://bxbgiybnabw7l::::res://hud.tscn<>uid://dfqnqv27btbu0::::res://water.tscn<>uid://cpw370mlsgwnm::::res://chest.tscn
+level.tscn::PackedScene::9076527244405459630::1760925329::0::1::::<><><>0<>0<><>::uid://dm53fumr751jp::::res://level.gd<>uid://dgrc55ix5op1p::::res://textures/low-poly/sand/packed_albedo_height.png<>uid://bnrp8h3cvgsgr::::res://textures/low-poly/sand/packed_normal_roughness.png<>uid://ck7qad54dr1r::::res://player.tscn<>uid://b3mrd1eoji0cb::::res://textures/low-poly/grass/packed_albedo_height.png<>uid://xbg02kiaex5e::::res://textures/low-poly/grass/packed_normal_roughness.png<>uid://bxbgiybnabw7l::::res://hud.tscn<>uid://dfqnqv27btbu0::::res://water.tscn<>uid://cpw370mlsgwnm::::res://chest.tscn
 look_image.gd::GDScript::8104356565423570816::1760902710::0::1::::<>Sprite2D<><>0<>0<><>::
 player.gd::GDScript::3890862837235954733::1760919909::0::1::::<>CharacterBody3D<><>0<>0<><>::
 player.tscn::PackedScene::162992987324035889::1760919894::0::1::::<><><>0<>0<><>::uid://bvo07bqyymdjp::::res://player.gd
@@ -16,7 +16,7 @@ target.gd::GDScript::2843405890140379781::1760896866::0::1::::<>AnimatedSprite2D
 tree.tscn::PackedScene::-1::1760918895::0::1::::<><><>0<>0<><>::
 WADRE.gdshader::Shader::2128120685786786127::1760921675::0::1::::<><><>0<>0<><>::
 water.gdshader::Shader::3910364885127974588::1760920419::0::1::::<><><>0<>0<><>::
-water.tscn::PackedScene::7544055353098954669::1760921675::0::1::::<><><>0<>0<><>::uid://5k43pkrlgp16::::res://WADRE.gdshader
+water.tscn::PackedScene::7544055353098954669::1760926885::0::1::::<><><>0<>0<><>::uid://5k43pkrlgp16::::res://WADRE.gdshader
 ::res://addons/::1760916152
 ::res://addons/simplegrasstextured/::1760920153
 default_mesh.tres::ArrayMesh::1295522839817845829::1760839194::0::1::::<><><>0<>0<><>::
@@ -223,14 +223,14 @@ golden-cube.glb::PackedScene::397132137472531163::1760895964::1760919097::1::::<
 tree.glb::PackedScene::7701319642031161009::1760825856::1760919098::1::::<><><>0<>0<>2d8c09d2034c9675d0fd714d93f4e0b5<>res://.godot/imported/tree.glb-dbbbfd9746e57956f3856d83abfe5b4c.scn::
 ::res://modles/blender/::1760919103
 Chest.blend::PackedScene::989950473815370439::1760911397::1760919097::1::::<><><>0<>0<>e9303ea0f79bfd1388fc113943fb0c9c<>res://.godot/imported/Chest.blend-600303cbc1a53e18df000401ec053ee3.scn::uid://g5ddjpklwyp0::::res://assets/chest-texture.png
-::res://terrain-data/::1760920279
-terrain3d-01-01.res::Terrain3DRegion::8919441267203959237::1760920275::0::1::::<><><>0<>0<><>::
-terrain3d-01_00.res::Terrain3DRegion::6921736647356700169::1760920275::0::1::::<><><>0<>0<><>::
+::res://terrain-data/::1760925256
+terrain3d-01-01.res::Terrain3DRegion::8919441267203959237::1760925252::0::1::::<><><>0<>0<><>::
+terrain3d-01_00.res::Terrain3DRegion::6921736647356700169::1760925252::0::1::::<><><>0<>0<><>::
 terrain3d-01_01.res::Terrain3DRegion::3636961583598276608::1760920275::0::1::::<><><>0<>0<><>::
-terrain3d_00-01.res::Terrain3DRegion::4416658828603655668::1760920275::0::1::::<><><>0<>0<><>::
-terrain3d_00_00.res::Terrain3DRegion::8760221416028009830::1760920275::0::1::::<><><>0<>0<><>::
+terrain3d_00-01.res::Terrain3DRegion::4416658828603655668::1760925252::0::1::::<><><>0<>0<><>::
+terrain3d_00_00.res::Terrain3DRegion::8760221416028009830::1760925252::0::1::::<><><>0<>0<><>::
 terrain3d_00_01.res::Terrain3DRegion::1961414896971270068::1760920275::0::1::::<><><>0<>0<><>::
-::res://textures/::1760919096
+::res://textures/::1760922689
 packed_albedo_height.png::CompressedTexture2D::993188385864083284::1760822068::1760919095::1::::<><><>0<>0<>2038c1d39e82a036d22dedaf10d53600<>res://.godot/imported/packed_albedo_height.png-1944f29f58a085292dad220986848f2b.bptc.ctex::
 packed_normal_roughness.png::CompressedTexture2D::3496048733679554785::1760822072::1760919094::1::::<><><>0<>0<>36c22040d50e37a45b5c29b9f1bd59f8<>res://.godot/imported/packed_normal_roughness.png-c3384dfbadaaaa40d371397f59bfe00e.bptc.ctex::
 Sand-AmbientOcclusion.png::CompressedTexture2D::2481409921859466271::1760819443::1760919094::1::::<><><>0<>0<>0d07d1e7a494437c9a3b52046c6ddebe<>res://.godot/imported/Sand-AmbientOcclusion.png-4bf88dd7370a71d94fcb96d9d0f68d13.ctex::
@@ -238,7 +238,7 @@ Sand-Displacement.png::CompressedTexture2D::1879845225911490906::1760819654::176
 Sand-Normal.png::CompressedTexture2D::547557378514091486::1760818849::1760919094::1::::<><><>0<>0<>3025365e79b227beee2508707390b721<>res://.godot/imported/Sand-Normal.png-96055ede21d021f61ab53c13b78435c9.ctex::
 Sand-Roughness.png::CompressedTexture2D::8587195862977960634::1760819444::1760919094::1::::<><><>0<>0<>bbbbb9f6edf196ab518c32c4a497560e<>res://.godot/imported/Sand-Roughness.png-e8e78f6bdafca113c102cb786293def1.ctex::
 Sand.png::CompressedTexture2D::9149956744725049423::1760818852::1760919094::1::::<><><>0<>0<>8f6e54632c37522d704ce766d4da0cfd<>res://.godot/imported/Sand.png-3962ca04ee7747efe4d79534ae20817f.ctex::
-::res://textures/low-poly/::1760919096
+::res://textures/low-poly/::1760922689
 ::res://textures/low-poly/grass/::1760919096
 height_map_12345.png::CompressedTexture2D::5041052354441215394::1760884349::1760919095::1::::<><><>0<>0<>9de1ceeabf8fc68ff389d3ccc3247ecd<>res://.godot/imported/height_map_12345.png-eb6d2b84ca8db47d572ae1ed0cb49e73.ctex::
 normal_map_12345.png::CompressedTexture2D::3068828373808857061::1760884349::1760919095::1::::<><><>0<>0<>ce6194015a4adc68d697ddd6405c3959<>res://.godot/imported/normal_map_12345.png-91aaae16235760017f7cd1bee46fecce.ctex::
@@ -253,3 +253,11 @@ packed_albedo_height.png::CompressedTexture2D::7615666131673806447::1760884241::
 packed_normal_roughness.png::CompressedTexture2D::3334940169934062181::1760884247::1760919095::1::::<><><>0<>0<>5a8109ade84b6c34a966f7b659b3e88c<>res://.godot/imported/packed_normal_roughness.png-1aad1f5668b04a03b8bad9a5db7409d6.bptc.ctex::
 regular_image_12345.png::CompressedTexture2D::1128354253676483959::1760884126::1760919094::1::::<><><>0<>0<>c06382c5b521ef93dac444a9c9aa5c33<>res://.godot/imported/regular_image_12345.png-8430896893804dc351a50ec7014aae25.ctex::
 roughness_map_12345.png::CompressedTexture2D::3295260542162200816::1760884127::1760919094::1::::<><><>0<>0<>547704ae30df45687982f0a98df15fed<>res://.godot/imported/roughness_map_12345.png-3916655c405ee51162251269cef9cadf.ctex::
+::res://textures/low-poly/test-sand/::1760922689
+height_map_12345.png::CompressedTexture2D::2839251533006770391::1760922341::1760922644::1::::<><><>0<>0<>40df25b3b09c8b61cfdeab144e01e773<>res://.godot/imported/height_map_12345.png-c369f2e49d9a32eb9e3053ac8886ccb6.ctex::
+normal_map_12345.png::CompressedTexture2D::4457218596231163331::1760922341::1760922645::1::::<><><>0<>0<>2d2b2dc71e65144226703d29493f6ce7<>res://.godot/imported/normal_map_12345.png-748cb2b5353e19807fdfaf4f5a97aec2.ctex::
+packed_albedo_height.png::CompressedTexture2D::6603836573157654353::1760922678::1760922679::1::::<><><>0<>0<>7d8dc9f111749191c4b4bb5727a4399d<>res://.godot/imported/packed_albedo_height.png-d966e87f2096ab288a6ab1ae4cec1ba3.bptc.ctex::
+packed_normal_roughness.png::CompressedTexture2D::6685089331776552528::1760922681::1760922682::1::::<><><>0<>0<>18aaa5719673f77e6bd85d3ce8182afb<>res://.godot/imported/packed_normal_roughness.png-368626c87cb95689fc1c10412e750db7.bptc.ctex::
+regular.png::CompressedTexture2D::8576358466407720864::1760922578::1760922644::1::::<><><>0<>0<>359ca728304c8e8f72e0310994a5c042<>res://.godot/imported/regular.png-7483bd8b94e3a0a943caaaa36d7058dc.ctex::
+regular_image_12345.png::CompressedTexture2D::7228097353185162640::1760922340::1760922644::1::::<><><>0<>0<>917efbea0e67343f6527afa87118a2a5<>res://.godot/imported/regular_image_12345.png-83bdda4457e567c9b3a06785205a827a.ctex::
+roughness_map_12345.png::CompressedTexture2D::1770140954820575630::1760922341::1760922644::1::::<><><>0<>0<>453478772069d6b5576a12ee93069d48<>res://.godot/imported/roughness_map_12345.png-fc7e9af08788667d91fccab0f1231e87.ctex::

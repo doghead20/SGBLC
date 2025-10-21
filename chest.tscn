@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpw370mlsgwnm"]
+[gd_scene load_steps=6 format=3 uid="uid://cpw370mlsgwnm"]
 
 [ext_resource type="Script" uid="uid://cujkykol3fyin" path="res://chest.gd" id="1_8uwsg"]
-[ext_resource type="PackedScene" uid="uid://b4ewani4lsceb" path="res://modles/chest.glb" id="1_twpm2"]
 [ext_resource type="ArrayMesh" uid="uid://dwjtvtxr4uixh" path="res://modles/BlockBench/Chest.obj" id="2_bp1or"]
+[ext_resource type="PackedScene" uid="uid://jam236puwu7o" path="res://modles/BlockBench/Chest.gltf" id="3_bp1or"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8uwsg"]
 size = Vector3(1.1359406, 1.1325073, 1.1330872)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8uwsg"]
+albedo_color = Color(1, 0.14509805, 1, 1)
 
 [node name="Chest" type="StaticBody3D"]
 script = ExtResource("1_8uwsg")
@@ -19,7 +22,8 @@ shape = SubResource("BoxShape3D_8uwsg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -0.78149307, 0)
-mesh = ExtResource("2_bp1or")
-
-[node name="chest" parent="." instance=ExtResource("1_twpm2")]
 visible = false
+mesh = ExtResource("2_bp1or")
+surface_material_override/2 = SubResource("StandardMaterial3D_8uwsg")
+
+[node name="blockbench_export" parent="." instance=ExtResource("3_bp1or")]

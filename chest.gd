@@ -11,6 +11,7 @@ func _ready():
 var original_colors = {}
 
 func _store_original_colors(root: Node3D):
+	return
 	for child in root.get_children():
 		if child is MeshInstance3D:
 			var mat = child.get_active_material(0)
@@ -21,6 +22,7 @@ func _store_original_colors(root: Node3D):
 			_store_original_colors(child)
 
 func _apply_highlight(root: Node3D, amount: float):
+	return
 	for child in root.get_children():
 		if child is MeshInstance3D:
 			var mat = child.get_active_material(0)
@@ -47,6 +49,7 @@ func highlight(root: Node3D, amount: float = 0.7):
 	_apply_highlight(root, amount)
 
 func remove_highlight(root: Node3D):
+	return
 	for child in root.get_children():
 		if child is MeshInstance3D:
 			var orig_color = original_colors.get(child.get_path(), null)
